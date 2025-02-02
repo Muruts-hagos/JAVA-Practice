@@ -1,21 +1,12 @@
-public class Player {
 
-    public final static String X = "| X " ;
-    public final static String O = "| O " ;
-
-    public Player() {
-        this(X);
-    }
-
-    public Player(String player) {
-        representation=player;
-    }
-
+public abstract class Player {
     private String representation;
 
-
+    public Player(String representation) {
+        this.representation = representation;
+    }
+    public abstract int[] pickCordinates();
     public String getRepresentation() {
         return representation;
     }
-
 }
